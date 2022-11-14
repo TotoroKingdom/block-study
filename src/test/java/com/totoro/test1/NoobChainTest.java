@@ -31,12 +31,6 @@ public class NoobChainTest {
         System.out.println("thirdBlock:  "+threeBlock.hash);
         blocks.get(2).mineBlock(difficulty);
 
-
-
-
-
-
-
         String blockJson = new GsonBuilder().setPrettyPrinting().create().toJson(blocks);
         System.out.println(blockJson);
 
@@ -50,7 +44,7 @@ public class NoobChainTest {
 
         Block currentBlock;
         Block previousBlock;
-        String hashTarget = new String(new char[difficulty]).replace('\0', (char) 0);
+        String hashTarget = new String(new char[difficulty]).replace('\0', '0');
 
         for (int i = 1; i < blocks.size(); i++) {
             currentBlock = blocks.get(i);
